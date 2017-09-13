@@ -1,0 +1,214 @@
+Treatment,Sample.Number,Experiment.Date,Replicate,Metabolite,Conc.uM,,Substrate,Cult,Microbe
+HL-58 G,,Control March 2017,A,Acetate,3.3,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,A,Acetone,5.2,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,A,DSS-d6 (Chemical Shape Indicator),497.6,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,A,Ethanol,3.8,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,A,Formate,5.5,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,A,Glucose,0,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,A,Xylose,0,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,B,Acetate,5.4,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,B,Acetone,2.8,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,B,DSS-d6 (Chemical Shape Indicator),497.6,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,B,Ethanol,22.9,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,B,Formate,7.2,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,B,Glucose,0,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,B,Xylose,0,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,C,Acetate,2.7,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,C,Acetone,5.1,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,C,DSS-d6 (Chemical Shape Indicator),497.6,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,C,Ethanol,9.5,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,C,Formate,3.7,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,C,Glucose,0,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,C,Xylose,0,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,D,Acetate,4.4,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,D,Acetone,5.1,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,D,DSS-d6 (Chemical Shape Indicator),497.6,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,D,Ethanol,8.8,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,D,Formate,5.8,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,D,Glucose,0,G,Glucose,,HL-58
+HL-58 G,,Control March 2017,D,Xylose,0,G,Glucose,,HL-58
+HL-58 X,,Control March 2017,A,Acetate,1.1,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,A,Acetone,5.7,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,A,DSS-d6 (Chemical Shape Indicator),497.6,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,A,Ethanol,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,A,Formate,1.6,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,A,Glucose,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,A,Xylose,6258.8,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,B,Acetate,0.7,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,B,Acetone,4.9,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,B,DSS-d6 (Chemical Shape Indicator),497.6,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,B,Ethanol,10.1,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,B,Formate,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,B,Glucose,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,B,Xylose,6206.5,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,C,Acetate,1.3,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,C,Acetone,2,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,C,DSS-d6 (Chemical Shape Indicator),497.6,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,C,Ethanol,2.7,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,C,Formate,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,C,Glucose,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,C,Xylose,3709.4,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,D,Acetate,0.9,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,D,Acetone,3.9,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,D,DSS-d6 (Chemical Shape Indicator),497.6,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,D,Ethanol,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,D,Formate,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,D,Glucose,0,X,Xylose,,HL-58
+HL-58 X,,Control March 2017,D,Xylose,3968.4,X,Xylose,,HL-58
+HLH media X,,Control March 2017,A,Acetate,11.3,media,Xylose,,HLH
+HLH media X,,Control March 2017,A,Acetone,4.7,media,Xylose,,HLH
+HLH media X,,Control March 2017,A,DSS-d6 (Chemical Shape Indicator),497.6,media,Xylose,,HLH
+HLH media X,,Control March 2017,A,Ethanol,25.9,media,Xylose,,HLH
+HLH media X,,Control March 2017,A,Formate,8.9,media,Xylose,,HLH
+HLH media X,,Control March 2017,A,Glucose,0,media,Xylose,,HLH
+HLH media X,,Control March 2017,A,Xylose,6194.7,media,Xylose,,HLH
+HL-48 G,N1,Main Jan 2017,1,Acetate,11.4,G,Glucose,Axenic,HL-48
+HL-48 G,N1,Main Jan 2017,1,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-48
+HL-48 G,N1,Main Jan 2017,1,Ethanol,18.8,G,Glucose,Axenic,HL-48
+HL-48 G,N1,Main Jan 2017,1,Formate,11.2,G,Glucose,Axenic,HL-48
+HL-48 G,N1,Main Jan 2017,1,Glucose,3653.8,G,Glucose,Axenic,HL-48
+HL-48 G,N1,Main Jan 2017,1,Xylose,0,G,Glucose,Axenic,HL-48
+HL-48 G,N2,Main Jan 2017,2,Acetate,10,G,Glucose,Axenic,HL-48
+HL-48 G,N2,Main Jan 2017,2,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-48
+HL-48 G,N2,Main Jan 2017,2,Ethanol,15,G,Glucose,Axenic,HL-48
+HL-48 G,N2,Main Jan 2017,2,Formate,12.4,G,Glucose,Axenic,HL-48
+HL-48 G,N2,Main Jan 2017,2,Glucose,4037.4,G,Glucose,Axenic,HL-48
+HL-48 G,N2,Main Jan 2017,2,Xylose,0,G,Glucose,Axenic,HL-48
+HL-48 G,N3,Main Jan 2017,3,Acetate,12.2,G,Glucose,Axenic,HL-48
+HL-48 G,N3,Main Jan 2017,3,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-48
+HL-48 G,N3,Main Jan 2017,3,Ethanol,16.4,G,Glucose,Axenic,HL-48
+HL-48 G,N3,Main Jan 2017,3,Formate,12,G,Glucose,Axenic,HL-48
+HL-48 G,N3,Main Jan 2017,3,Glucose,3309,G,Glucose,Axenic,HL-48
+HL-48 G,N3,Main Jan 2017,3,Xylose,0,G,Glucose,Axenic,HL-48
+HL-48 G,N4,Main Jan 2017,4,Acetate,14.5,G,Glucose,Axenic,HL-48
+HL-48 G,N4,Main Jan 2017,4,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-48
+HL-48 G,N4,Main Jan 2017,4,Ethanol,13.5,G,Glucose,Axenic,HL-48
+HL-48 G,N4,Main Jan 2017,4,Formate,10.3,G,Glucose,Axenic,HL-48
+HL-48 G,N4,Main Jan 2017,4,Glucose,2846.3,G,Glucose,Axenic,HL-48
+HL-48 G,N4,Main Jan 2017,4,Xylose,0,G,Glucose,Axenic,HL-48
+HL-48 G,N5,Main Jan 2017,5,Acetate,13.8,G,Glucose,Axenic,HL-48
+HL-48 G,N5,Main Jan 2017,5,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-48
+HL-48 G,N5,Main Jan 2017,5,Ethanol,12.1,G,Glucose,Axenic,HL-48
+HL-48 G,N5,Main Jan 2017,5,Formate,13.5,G,Glucose,Axenic,HL-48
+HL-48 G,N5,Main Jan 2017,5,Glucose,2664,G,Glucose,Axenic,HL-48
+HL-48 G,N5,Main Jan 2017,5,Xylose,0,G,Glucose,Axenic,HL-48
+HL-58 G,N6,Main Jan 2017,1,Acetate,4.4,G,Glucose,Axenic,HL-58
+HL-58 G,N6,Main Jan 2017,1,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-58
+HL-58 G,N6,Main Jan 2017,1,Ethanol,8,G,Glucose,Axenic,HL-58
+HL-58 G,N6,Main Jan 2017,1,Formate,12.1,G,Glucose,Axenic,HL-58
+HL-58 G,N6,Main Jan 2017,1,Glucose,1057.8,G,Glucose,Axenic,HL-58
+HL-58 G,N6,Main Jan 2017,1,Xylose,0,G,Glucose,Axenic,HL-58
+HL-58 G,N7,Main Jan 2017,2,Acetate,6.7,G,Glucose,Axenic,HL-58
+HL-58 G,N7,Main Jan 2017,2,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-58
+HL-58 G,N7,Main Jan 2017,2,Ethanol,13,G,Glucose,Axenic,HL-58
+HL-58 G,N7,Main Jan 2017,2,Formate,14.5,G,Glucose,Axenic,HL-58
+HL-58 G,N7,Main Jan 2017,2,Glucose,1182.3,G,Glucose,Axenic,HL-58
+HL-58 G,N7,Main Jan 2017,2,Xylose,0,G,Glucose,Axenic,HL-58
+HL-58 G,N8,Main Jan 2017,3,Acetate,4.6,G,Glucose,Axenic,HL-58
+HL-58 G,N8,Main Jan 2017,3,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-58
+HL-58 G,N8,Main Jan 2017,3,Ethanol,9.1,G,Glucose,Axenic,HL-58
+HL-58 G,N8,Main Jan 2017,3,Formate,12.1,G,Glucose,Axenic,HL-58
+HL-58 G,N8,Main Jan 2017,3,Glucose,1048.5,G,Glucose,Axenic,HL-58
+HL-58 G,N8,Main Jan 2017,3,Xylose,0,G,Glucose,Axenic,HL-58
+HL-58 G,N9,Main Jan 2017,4,Acetate,6,G,Glucose,Axenic,HL-58
+HL-58 G,N9,Main Jan 2017,4,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-58
+HL-58 G,N9,Main Jan 2017,4,Ethanol,9.1,G,Glucose,Axenic,HL-58
+HL-58 G,N9,Main Jan 2017,4,Formate,12.1,G,Glucose,Axenic,HL-58
+HL-58 G,N9,Main Jan 2017,4,Glucose,1157.9,G,Glucose,Axenic,HL-58
+HL-58 G,N9,Main Jan 2017,4,Xylose,0,G,Glucose,Axenic,HL-58
+HL-58 G,N10,Main Jan 2017,5,Acetate,4.6,G,Glucose,Axenic,HL-58
+HL-58 G,N10,Main Jan 2017,5,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Axenic,HL-58
+HL-58 G,N10,Main Jan 2017,5,Ethanol,7.8,G,Glucose,Axenic,HL-58
+HL-58 G,N10,Main Jan 2017,5,Formate,11.4,G,Glucose,Axenic,HL-58
+HL-58 G,N10,Main Jan 2017,5,Glucose,1505.4,G,Glucose,Axenic,HL-58
+HL-58 G,N10,Main Jan 2017,5,Xylose,0,G,Glucose,Axenic,HL-58
+HL-48/58 G,N11,Main Jan 2017,1,Acetate,9.5,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N11,Main Jan 2017,1,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N11,Main Jan 2017,1,Ethanol,6.8,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N11,Main Jan 2017,1,Formate,10.1,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N11,Main Jan 2017,1,Glucose,3065.8,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N11,Main Jan 2017,1,Xylose,0,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N12,Main Jan 2017,2,Acetate,6,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N12,Main Jan 2017,2,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N12,Main Jan 2017,2,Ethanol,7.1,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N12,Main Jan 2017,2,Formate,11.4,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N12,Main Jan 2017,2,Glucose,3250.8,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N12,Main Jan 2017,2,Xylose,0,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N13,Main Jan 2017,3,Acetate,12.4,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N13,Main Jan 2017,3,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N13,Main Jan 2017,3,Ethanol,6.9,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N13,Main Jan 2017,3,Formate,11.4,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N13,Main Jan 2017,3,Glucose,2922.7,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N13,Main Jan 2017,3,Xylose,0,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N14,Main Jan 2017,4,Acetate,8.7,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N14,Main Jan 2017,4,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N14,Main Jan 2017,4,Ethanol,7.8,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N14,Main Jan 2017,4,Formate,12.7,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N14,Main Jan 2017,4,Glucose,2617.9,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N14,Main Jan 2017,4,Xylose,0,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N15,Main Jan 2017,5,Acetate,4.4,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N15,Main Jan 2017,5,DSS-d6 (Chemical Shape Indicator),498.5,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N15,Main Jan 2017,5,Ethanol,7.5,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N15,Main Jan 2017,5,Formate,10.4,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N15,Main Jan 2017,5,Glucose,3345.2,G,Glucose,Co-culture,HL-48/58
+HL-48/58 G,N15,Main Jan 2017,5,Xylose,0,G,Glucose,Co-culture,HL-48/58
+HL-48 X,N16,Main Jan 2017,1,Acetate,5.5,X,Xylose,Axenic,HL-48
+HL-48 X,N16,Main Jan 2017,1,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Axenic,HL-48
+HL-48 X,N16,Main Jan 2017,1,Ethanol,5.7,X,Xylose,Axenic,HL-48
+HL-48 X,N16,Main Jan 2017,1,Formate,10.9,X,Xylose,Axenic,HL-48
+HL-48 X,N16,Main Jan 2017,1,Glucose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N16,Main Jan 2017,1,Xylose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N17,Main Jan 2017,2,Acetate,3.3,X,Xylose,Axenic,HL-48
+HL-48 X,N17,Main Jan 2017,2,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Axenic,HL-48
+HL-48 X,N17,Main Jan 2017,2,Ethanol,3.9,X,Xylose,Axenic,HL-48
+HL-48 X,N17,Main Jan 2017,2,Formate,6.2,X,Xylose,Axenic,HL-48
+HL-48 X,N17,Main Jan 2017,2,Glucose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N17,Main Jan 2017,2,Xylose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N18,Main Jan 2017,3,Acetate,4.1,X,Xylose,Axenic,HL-48
+HL-48 X,N18,Main Jan 2017,3,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Axenic,HL-48
+HL-48 X,N18,Main Jan 2017,3,Ethanol,6.1,X,Xylose,Axenic,HL-48
+HL-48 X,N18,Main Jan 2017,3,Formate,12.5,X,Xylose,Axenic,HL-48
+HL-48 X,N18,Main Jan 2017,3,Glucose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N18,Main Jan 2017,3,Xylose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N19,Main Jan 2017,4,Acetate,2.7,X,Xylose,Axenic,HL-48
+HL-48 X,N19,Main Jan 2017,4,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Axenic,HL-48
+HL-48 X,N19,Main Jan 2017,4,Ethanol,5.4,X,Xylose,Axenic,HL-48
+HL-48 X,N19,Main Jan 2017,4,Formate,8.9,X,Xylose,Axenic,HL-48
+HL-48 X,N19,Main Jan 2017,4,Glucose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N19,Main Jan 2017,4,Xylose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N20,Main Jan 2017,5,Acetate,2.8,X,Xylose,Axenic,HL-48
+HL-48 X,N20,Main Jan 2017,5,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Axenic,HL-48
+HL-48 X,N20,Main Jan 2017,5,Ethanol,5.8,X,Xylose,Axenic,HL-48
+HL-48 X,N20,Main Jan 2017,5,Formate,12.1,X,Xylose,Axenic,HL-48
+HL-48 X,N20,Main Jan 2017,5,Glucose,0,X,Xylose,Axenic,HL-48
+HL-48 X,N20,Main Jan 2017,5,Xylose,0,X,Xylose,Axenic,HL-48
+HL-48/58 X,N21,Main Jan 2017,1,Acetate,5.9,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N21,Main Jan 2017,1,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N21,Main Jan 2017,1,Ethanol,5.2,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N21,Main Jan 2017,1,Formate,12.1,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N21,Main Jan 2017,1,Glucose,0,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N21,Main Jan 2017,1,Xylose,0,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N22,Main Jan 2017,2,Acetate,3.5,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N22,Main Jan 2017,2,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N22,Main Jan 2017,2,Ethanol,4.8,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N22,Main Jan 2017,2,Formate,11,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N22,Main Jan 2017,2,Glucose,0,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N22,Main Jan 2017,2,Xylose,0,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N23,Main Jan 2017,3,Acetate,,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N23,Main Jan 2017,3,DSS-d6 (Chemical Shape Indicator),,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N23,Main Jan 2017,3,Ethanol,,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N23,Main Jan 2017,3,Formate,,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N23,Main Jan 2017,3,Glucose,,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N23,Main Jan 2017,3,Xylose,,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N24,Main Jan 2017,4,Acetate,3.4,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N24,Main Jan 2017,4,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N24,Main Jan 2017,4,Ethanol,4.3,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N24,Main Jan 2017,4,Formate,12.8,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N24,Main Jan 2017,4,Glucose,0,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N24,Main Jan 2017,4,Xylose,0,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N25,Main Jan 2017,5,Acetate,6.7,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N25,Main Jan 2017,5,DSS-d6 (Chemical Shape Indicator),498.5,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N25,Main Jan 2017,5,Ethanol,4.2,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N25,Main Jan 2017,5,Formate,11.1,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N25,Main Jan 2017,5,Glucose,0,X,Xylose,Co-culture,HL-48/58
+HL-48/58 X,N25,Main Jan 2017,5,Xylose,0,X,Xylose,Co-culture,HL-48/58
