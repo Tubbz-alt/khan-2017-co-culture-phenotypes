@@ -19,6 +19,9 @@ meta <- read.csv("../data/Metabolites.2.csv")           #NMR metabolites and ass
 
 ### Raw data
 
-<!--
-Genetic sequencing data is available on Zenodo for both [16S amplicons](https://zenodo.org/record/803376) and [18S amplicons](https://zenodo.org/record/803476).
--->
+
+RNA seq data is available under accession GSE103773:
+<https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE103773>
+
+See also BioProject [PRJNA406985](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA406985) and
+SRA	[SRP117464](https://www.ncbi.nlm.nih.gov/sra?term=SRP117464).
