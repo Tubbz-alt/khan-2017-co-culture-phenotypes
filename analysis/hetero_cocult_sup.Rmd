@@ -8,7 +8,7 @@ output:
   html_document: default
 ---
 
-## Supplementary Methods for Data Analysis 
+## Supplementary Methods for Data Analysis
 
 #### About this document
 
@@ -26,7 +26,7 @@ The goal of this document it to provide a reproducible comprehensive overview of
 ```{r setup, results='hide', message=F, warning=F}
 library("checkpoint")       #Part of MS R Open to make this software stack more reproducible
 library("knitr")            #package for report generation; assists with R markdown formatting
-checkpoint("2017-06-12", use.knitr = T)
+checkpoint("2017-07-01", use.knitr = T)
 
 library("dplyr")            #package for manipulating data frames
 library("ggplot2")          #plotting package
@@ -44,7 +44,7 @@ theme_set(theme_bw())
 set.seed('711')
 ```
 
-```{r setup-install, include=F, eval=F}
+```{r setup-install, include=T, eval=F}
 # DESeq is installed through bioconductor
 source("https://bioconductor.org/biocLite.R")
 biocLite("DESeq2", suppressUpdates = T)
@@ -90,7 +90,7 @@ these fractions were measured via FACS
 #vars <- c("HL.58.GFP.frac", "parent.num") #try to pull frac values out of data frame
 #grow <- cbind(grow[!vars], GFP.num, parent.num) #try to add abs values
 t1 <- melt(grow, id.vars = c("Treatment", "Cult", "Species", "Substrate",
-                             "Sample.ID", "Replicate", "Time.h", "GFP.frac", "parent.frac")) 
+                             "Sample.ID", "Replicate", "Time.h", "GFP.frac", "parent.frac"))
 #long format data
 
 p.gro <- ggplot(t1, aes(x = Time.h, y = value, color = variable)) +
@@ -122,23 +122,23 @@ head(df)
 dim(df)
 
 lm_eqn_growth = function(df){
-  
+
   if(all(is.na(df$value))) return("")
   # Super important! Return an empty string for the missing values.
-     
+
   m = summary(lm(log(value) ~ Time.h, df)) # Hardcoded to my data
   m
-  
+
   m$coefficients
   m$coefficients[2] # Slope of Time.h
   m$coefficients[8] # P value of Time.h
-  
+
   if(m$coefficients[8] < 0.001) {
     outputp <- "0.001"
   }else{
     outputp <- round(m$coefficients[8], digits = 3)
   }
-  
+
   eq <- substitute(
     atop("slope ="~slope, "p-value ="~pr), # Two lines
     #"slope ="~slope~","~~R^2~"="~r2, # One line
@@ -190,7 +190,7 @@ ggsave("figures/fig1-parts/fig1-growth.pdf", width = 120, units = "mm", height =
 #   scale_color_manual(values = c("#999999", "#6DCD59FF", "#482878")) +
 #   theme(strip.background = element_blank(), legend.position = "none")
 # p.gro + geom_smooth(method = "lm", fill = "#CCCCCC", show.legend = F)
-# 
+#
 # # Note how "free_x" no longer applied because Time.h must be consistent
 # while stacked.
 # # Positions of labels also make less sense.
@@ -231,7 +231,7 @@ ggsave("figures/fig1-parts/fig1-growth-cutaway-full.pdf", width = 120, units = "
 ```
 
 
-## Process external metabolites 
+## Process external metabolites
 
 NMR metabolomics data derived from culture filtrate
 
@@ -276,7 +276,7 @@ ggsave("figures/fig1-parts/fig1-mets.pdf", width = 60, units = "mm", height = 50
 #   facet_wrap(~Substrate, ncol = 1, strip.position = "right") +
 #   scale_color_manual(values = c("#482878", "#777777", "#6DCD59FF")) +
 #   theme(strip.background = element_blank(), axis.text.x = element_text(angle = -20, hjust=0))
-# 
+#
 # ggsave("figures/fig1-parts/fig1-mets-flipped.pdf", width = 60, units = "mm", height = 50, scale = 1.4)
 
 
@@ -289,7 +289,7 @@ met %>% head
 
 # Thanks to the magic of dplyr, broom, and default stats, we can do this:
 met %>% group_by(Substrate, Metabolite) %>%
-  do(tidy(pairwise.t.test(.$Conc.uM, .$Microbe, p.adj = "holm"))) %>% 
+  do(tidy(pairwise.t.test(.$Conc.uM, .$Microbe, p.adj = "holm"))) %>%
   kable() %>% kable_styling(full_width = F)
 
 # Note we are using the 'holm' correction because it's 'uniformly more powerful' then 'bonf'.
@@ -328,11 +328,11 @@ met %>% group_by(Substrate, Metabolite, Microbe) %>% summarise(mean.Conc.uM = me
 
 
 
-## Process RNAseq data 
+## Process RNAseq data
 
 Volcano plots!
 
-#### Normalize RNAseq data to RPKM 
+#### Normalize RNAseq data to RPKM
 RNA seq data processing for Halomonas HL-48; generate normalized counts in RPKM
 
 ```{r HL48RPKM-er}
@@ -367,13 +367,13 @@ General function for DESeq contrasts.
 deseq_diff <- function(df, contrasts, annotations){
   # perform deseq contrast
   r <- results(df, contrasts)
-  
+
   # Convert to table and relablel row names to GeneID
   r <- add_rownames(data.frame(r), "GeneID")
-  
+
   # merge in annotations from file
   r.an <- merge(annotations, r, by = "GeneID")
-  
+
   return(r.an)
 }
 ```
@@ -448,7 +448,7 @@ colData(dds.58)$condition %>% table
 
 ```
 
-more RNA seq data processing for Marinobacter HL-58; 
+more RNA seq data processing for Marinobacter HL-58;
 generate differential expression output for HL-58 glucose competition treatment
 HL-58 glucose axenic  vs. HL-58/HL-48 glucose co-culture
 note that HL-58 does not grow on xylose; hence, differential expression cannot be analyzed for HL-58 xylose commensalism
@@ -480,7 +480,7 @@ generate differential expression output for HL-58 xylose commensalism over gluco
 HL-58 glucose axenic  vs. HL-58/HL-48 xylose co-culture
 
 Because HL-58 does not grow on xylose, but can survive in the presence of HL-48, this is used as a proxy for the impossible `HL_58_X`.
-Note that two treatments are applied (different substrate and introduction of HL-48). 
+Note that two treatments are applied (different substrate and introduction of HL-48).
 
 ```{r HL58 proxy diff, warning=F}
 # new graph control to two treatments
@@ -496,7 +496,7 @@ kable(head(HL58.diff.proxy))
 ```{r genes_discussed_in_paper, include=F}
 # > I built 3 new files into the Hetero_Cocult directory... These correspond to the volcano plot panels. Note also that there is a script that I used to generate these called manual.diff.gene.puller.R. These lists are those genes that showed 2-fold changes and an adjusted p-value <= 0.05. I used these files as a filtered data set to draft the last 3 paragraphs of the results section.
 
-# This section impliments the code found in manual.diff.gene.puller.R.
+# This section implements the code found in manual.diff.gene.puller.R.
 
 tmp <- HL48.diff.comp[abs(HL48.diff.comp$log2FoldChange) >= 1,]
 tmp <- tmp[tmp$padj <= 0.05,]
@@ -532,7 +532,7 @@ gp.labels <- data.frame(gene = gp$GeneID, Treatment = gp$Treatment, pvalue = -lo
 ```
 
 
-## Plot differentially expressed genes 
+## Plot differentially expressed genes
 setup volcano plot for HL48 glucose competition
 this analysis barrows ideas/code from a previously described example
 source <https://twbattaglia.github.io/2016/12/17/volcano-plot/>
@@ -543,7 +543,7 @@ add_color_cutoff <- function(df, pvalue_cutoff = -log10(0.05), up_name, down_nam
   df$color <- default_name
   df$color[df$lfc > 0 & df$pvalue > pvalue_cutoff] <- up_name
   df$color[df$lfc < 0 & df$pvalue > pvalue_cutoff] <- down_name
-  
+
   return(df)
 }
 
@@ -552,17 +552,15 @@ wrap_strings <- function(x, goal_width = 40){
   as.character(sapply(x,FUN=function(x){
     if(is.na(x)){return("")}
     if(nchar(x) == 0){return("")}
-    width <- (nchar(x) / (ceiling(nchar(x) / goal_width)))
-    #print(width)
-    paste(strwrap(x,width=width), collapse=" \n")
+    print((nchar(x) / (ceiling(nchar(x)/goal_width))))
+    paste(strwrap(x, width = (nchar(x) / (ceiling(nchar(x)/goal_width)))), collapse=" \n")
   }))
 }
 
 # Test:
-c("test", "", NA) %>% wrap_strings
+c("test", "", NA) %>% wrap_strings()
 # Also use it on full gp.labels
 gp.labels$Product <- wrap_strings(gp.labels$Product)
-
 
 plot_v <- function(df, df.labels){
   # This function is hard-coded to our data. It's not meant to be a general function.
@@ -572,15 +570,15 @@ plot_v <- function(df, df.labels){
     geom_vline(xintercept = c(-log2(2),log2(2)), color = "grey40") + # Add cutoffs
     geom_hline(yintercept = -log10(0.05), color = "grey40") + # we put our pvalue cutoff in here
     geom_point(aes(color = factor(color)), size = 2, alpha = 0.5, na.rm = TRUE) +
-    theme(legend.position = "none") + # remove legend 
+    theme(legend.position = "none") + # remove legend
       # We let's add these manually so they match the different graph
     #annotate("text", x = -2, y = 0, label = "Axenic", size = 5, color = "black") + # add Untreated text
     #annotate("text", x = 2, y = 0, label = "Co-culture", size = 5, color = "red") +  # add Treated text
     #xlab(expression(log[2]("Co-culture" / "Axenic"))) + # x-axis label
     ylab(expression(-log[10]("adjusted p-value"))) + # y-axis label
     scale_y_continuous(trans = "log1p") + #transform the y-axis
-    scale_color_manual(values = c("Co-culture" = viridis(10, option = "C")[8], 
-                                  "Axenic" = viridis(10, option = "C")[1], 
+    scale_color_manual(values = c("Co-culture" = viridis(10, option = "C")[8],
+                                  "Axenic" = viridis(10, option = "C")[1],
                                   "None" = "grey")) + # We could add new colors here for Commensalism and Competition plots.
     geom_text_repel(data = df.labels, lineheight = 0.8,
                     mapping = aes(label = Product), min.segment.length = unit(0, "lines")
@@ -590,7 +588,6 @@ plot_v <- function(df, df.labels){
 }
 
 ```
-
 
 
 
@@ -630,12 +627,12 @@ dat.HL48.cmns <- data.frame(gene = HL48.diff.cmns$GeneID, pvalue = -log10(HL48.d
 #add column for directional coloring
 dat.HL48.cmns <- add_color_cutoff(dat.HL48.cmns, up_name = "Co-culture", down_name = "Axenic")
 
-#Subset table to annotate specific gene lables
+#Subset table to annotate specific gene labels
 # HL48.cmns.top_labelled <- rbind(top_n(dat.HL48.cmns, n = 5, wt = lfc),
 #                                 top_n(dat.HL48.cmns, n = 5, wt = -lfc))
 # HL48.cmns.top_labelled$Product <- wrap_strings(HL48.cmns.top_labelled$Product)
 
-# Manually edit labeled points on this graph. Easy way to remove underscores and unneede text.
+# Manually edit labeled points on this graph. Easy way to remove underscores and unneeded text.
 #HL48.cmns.top_labelled$Product <- pico(HL48.cmns.top_labelled$Product)
 
 g.HL48.cmns <- plot_v(dat.HL48.cmns, subset(gp.labels, Treatment == "HL48.cmns")) +
@@ -655,12 +652,12 @@ dat.HL58.comp <- data.frame(gene = HL58.diff.comp$GeneID, pvalue = -log10(HL58.d
 #add column for directional coloring
 dat.HL58.comp <- add_color_cutoff(dat.HL58.comp, up_name = "Co-culture", down_name = "Axenic")
 
-#Subset table to annotate specific gene lables
+#Subset table to annotate specific gene labels
 # HL58.comp.top_labelled <- rbind(top_n(dat.HL58.comp, n = 5, wt = lfc),
 #                                 top_n(dat.HL58.comp, n = 5, wt = -lfc))
 # HL58.comp.top_labelled$Product <- wrap_strings(HL58.comp.top_labelled$Product)
 
-# Manually edit labeled points on this graph. Easy way to remove underscores and unneede text.
+# Manually edit labeled points on this graph. Easy way to remove underscores and unneeded text.
 #HL58.comp.top_labelled$Product <- pico(HL58.comp.top_labelled$Product)
 
 g.HL58.comp <- plot_v(dat.HL58.comp, subset(gp.labels, Treatment == "HL58.comp")) +
@@ -682,12 +679,12 @@ dat.HL48.coculture <- data.frame(gene = HL48.diff.coculture$GeneID, pvalue = -lo
 #add column for directional coloring
 dat.HL48.coculture <- add_color_cutoff(dat.HL48.coculture, up_name = "Co-culture", down_name = "Axenic") #names are wrong, but keep is for testing.
 
-# Subset table to annotate specific gene lables
+# Subset table to annotate specific gene labels
 HL48.coculture.top_labelled <- rbind(top_n(dat.HL48.coculture, n = 5, wt = lfc),
                                      top_n(dat.HL48.coculture, n = 5, wt = -lfc))
 HL48.coculture.top_labelled$Product <- wrap_strings(HL48.coculture.top_labelled$Product)
 
-# Manually edit labeled points on this graph. Easy way to remove underscores and unneede text.
+# Manually edit labeled points on this graph. Easy way to remove underscores and unneeded text.
 #HL58.comp.top_labelled$Product <- pico(HL58.comp.top_labelled$Product)
 
 g.HL48.coculture <- plot_v(dat.HL48.coculture, HL48.coculture.top_labelled) +
@@ -705,12 +702,12 @@ dat.HL58.coculture <- data.frame(gene = HL58.diff.coculture$GeneID, pvalue = -lo
 #add column for directional coloring
 dat.HL58.coculture <- add_color_cutoff(dat.HL58.coculture, up_name = "Co-culture", down_name = "Axenic") #names are wrong, but keep is for testing.
 
-# Subset table to annotate specific gene lables
+# Subset table to annotate specific gene labels
 HL58.coculture.top_labelled <- rbind(top_n(dat.HL58.coculture, n = 5, wt = lfc),
                                      top_n(dat.HL58.coculture, n = 5, wt = -lfc))
 HL58.coculture.top_labelled$Product <- wrap_strings(HL58.coculture.top_labelled$Product)
 
-# Manually edit labeled points on this graph. Easy way to remove underscores and unneede text.
+# Manually edit labeled points on this graph. Easy way to remove underscores and unneeded text.
 #HL58.comp.top_labelled$Product <- pico(HL58.comp.top_labelled$Product)
 
 g.HL58.coculture <- plot_v(dat.HL58.coculture, HL58.coculture.top_labelled) +
@@ -728,12 +725,12 @@ dat.HL58.proxy <- data.frame(gene = HL58.diff.proxy$GeneID, pvalue = -log10(HL58
 #add column for directional coloring
 dat.HL58.proxy <- add_color_cutoff(dat.HL58.proxy, up_name = "Co-culture", down_name = "Axenic") #names are wrong, but keep is for testing.
 
-# Subset table to annotate specific gene lables
+# Subset table to annotate specific gene labels
 HL58.proxy.top_labelled <- rbind(top_n(dat.HL58.proxy, n = 5, wt = lfc),
                                  top_n(dat.HL58.proxy, n = 5, wt = -lfc))
 HL58.proxy.top_labelled$Product <- wrap_strings(HL58.proxy.top_labelled$Product)
 
-# Manually edit labeled points on this graph. Easy way to remove underscores and unneede text.
+# Manually edit labeled points on this graph. Easy way to remove underscores and unneeded text.
 #HL58.comp.top_labelled$Product <- pico(HL58.comp.top_labelled$Product)
 
 g.HL58.proxy <- plot_v(dat.HL58.proxy, HL58.proxy.top_labelled) +
@@ -780,7 +777,7 @@ knitr::knit_exit(append = F)
 
 
 
-# Functional Enrichment (FE) 
+# Functional Enrichment (FE)
 
 Dot plots!
 
@@ -862,7 +859,7 @@ mainroleeModuleEnrichment <- function(x,y)
         ratio <- pModule/pGenome
         if (pModule > pGenome)
         {
-          outputData <- rbind(outputData, cbind(ModuleID=mID, Main_Role=Main_Role, PVal=res$p.value, Ratio=ratio, PercentageInModule=pModule, PercentageInGenome=pGenome)) 
+          outputData <- rbind(outputData, cbind(ModuleID=mID, Main_Role=Main_Role, PVal=res$p.value, Ratio=ratio, PercentageInModule=pModule, PercentageInGenome=pGenome))
         }
       }
     }
@@ -911,7 +908,7 @@ MR.FE <- rbind(HL48.comp.MR.FE.U, HL48.cmns.MR.FE.U, HL58.comp.MR.FE.U,
 kable(MR.FE, caption = "Functional enrichment of main role gene categories")
 ```
 
-## Plot main role functional enrichment results 
+## Plot main role functional enrichment results
 
 ```{r plotMRFEresults, fig.height=6, fig.width=10}
 MR <- data.frame(dir = MR.FE$dir, Treatment = MR.FE$Treatment, Main_Role = MR.FE$Main_Role,
@@ -970,7 +967,7 @@ subroleModuleEnrichment <- function(x,y)
         ratio <- pModule/pGenome
         if (pModule > pGenome)
         {
-          outputData <- rbind(outputData, cbind(ModuleID=mID, Subrole=subRole, PVal=res$p.value, Ratio=ratio, PercentageInModule=pModule, PercentageInGenome=pGenome)) 
+          outputData <- rbind(outputData, cbind(ModuleID=mID, Subrole=subRole, PVal=res$p.value, Ratio=ratio, PercentageInModule=pModule, PercentageInGenome=pGenome))
         }
       }
     }
@@ -1017,7 +1014,7 @@ SR.FE <- rbind(HL48.comp.SR.FE.U, HL48.cmns.SR.FE.U, HL58.comp.SR.FE.U,
 kable(SR.FE, caption = "Functional enrichment of subrole gene categories")
 ```
 
-## Plot subrole functional enrichment results 
+## Plot subrole functional enrichment results
 
 ```{r plotSRFEresults, fig.height=6, fig.width=10}
 SR <- data.frame(dir = SR.FE$dir, Treatment = SR.FE$Treatment, Subrole = SR.FE$Subrole,
@@ -1037,7 +1034,7 @@ g.SR.FE
 ```
 
 
-## Combined plot of main-role and subrole functional enrichment results 
+## Combined plot of main-role and subrole functional enrichment results
 
 ```{r FE-combined, fig.width=5, fig.height=6, fig.show="hide"}
 names(MR)[3] <- "Main Role"
@@ -1068,17 +1065,17 @@ el.melt$value <- gsub("_", "", fixed = T, x = el.melt$value)
 # pico(el.melt$value) # Get text
 # el.melt$value <- c("the string"")
 
-# Also remove the unidentifed item
+# Also remove the unidentified item
 el.melt <- el.melt %>% subset(value != "")
 
 g.el.FE <- ggplot(el.melt, aes(x = Treatment, y = value, size = Ratio, fill = PercentageInModule))
 g.el.FE +  geom_point(shape = 21) + labs(x = "", y = "") + facet_grid(variable~dir, scales = "free_y", space = "free") +
-scale_size_continuous(range = c(2, 10)) + scale_fill_viridis(option = "B", begin = .1, end = .9) + 
+scale_size_continuous(range = c(2, 10)) + scale_fill_viridis(option = "B", begin = .1, end = .9) +
 theme(
   #legend.position = c(-0.9, -0.12), legend.direction = "horizontal", legend.box = "vertical", plot.margin = unit(c(10, 5.5, 30, 5.5), "points"),
   legend.position = c(-0.5, -0.10), legend.direction = "horizontal", legend.box = "vertical", plot.margin = unit(c(10, 5.5, 25, 5.5), "points"),
   strip.background = element_blank(), strip.text = element_text(size = 12), legend.spacing.y = unit(0, "points"),
-      axis.text.x = element_text(angle = -30, hjust=0, vjust = 1, size = 10)) # angle of 30 
+      axis.text.x = element_text(angle = -30, hjust=0, vjust = 1, size = 10)) # angle of 30
 
 ggsave("figures/fig2.pdf", width = 120, height = 120, units = "mm", scale = 1.5)
 
@@ -1213,12 +1210,12 @@ new.el.melt$value <- gsub("_", "", fixed = T, x = new.el.melt$value)
 # pico(el.melt$value) # Get text
 # el.melt$value <- c("the string"")
 
-# Also remove the unidentifed item
+# Also remove the unidentified item
 new.el.melt <-  new.el.melt %>% subset(value != "")
 
 g.new.el.FE <- ggplot(new.el.melt, aes(x = Treatment, y = value, size = Ratio, fill = PercentageInModule))
 g.new.el.FE + geom_point(shape = 21) + labs(x = "", y = "") + facet_grid(variable~dir, scales = "free_y", space = "free") +
-scale_size_continuous(range = c(2, 10)) + scale_fill_viridis(option = "B", begin = .1, end = .9) + 
+scale_size_continuous(range = c(2, 10)) + scale_fill_viridis(option = "B", begin = .1, end = .9) +
 theme(
   #legend.position = c(-0.9, -0.12), legend.direction = "horizontal", legend.box = "vertical", plot.margin = unit(c(10, 5.5, 30, 5.5), "points"),
   legend.position = c(-0.5, -0.10), legend.direction = "horizontal", legend.box = "vertical", plot.margin = unit(c(10, 10, 35, 5.5), "points"),
@@ -1235,7 +1232,7 @@ ggsave("figures/sub-FE-new.pdf", width = 114, height = 140, units = "mm", scale 
 
 
 
-```{r, save-and-quit, cache=F}
+```{r, cache=F}
 #Save and exit.
 knitr::knit_exit(F)
 
@@ -1254,7 +1251,7 @@ knitr::knit_exit(F)
 
 # Unused code
 
-This is old and no longer needed.
+This experimental code is not included in the main paper.
 
 ```{r color-grid, fig.width=9, fig.height=12}
 background_color = "#AAAAAA"
@@ -1267,21 +1264,21 @@ plot_grid(
   ,
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(9,5)]))
   ,
-  
+
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(7,4)]))
   ,
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(8,4)]))
   ,
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(9,4)]))
   ,
-  
+
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(7,3)]))
   ,
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(8,3)]))
   ,
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(9,3)]))
   ,
-  
+
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(7,2)]))
   ,
   p.gro + scale_color_manual(values = c(background_color, viridis(10)[c(8,2)]))
@@ -1296,7 +1293,7 @@ g.met +
   geom_boxplot(color = "gray", outlier.size = 0.0) +
   geom_jitter(width = 0.2) +
   labs(y = expression(paste("Concentration (", mu, M, ")"))) +
-  scale_color_viridis(discrete = TRUE) + 
+  scale_color_viridis(discrete = TRUE) +
   facet_grid(~ Metabolite) +
   theme(strip.background = element_blank(), legend.position = "none", axis.text.x = element_text(angle = -90, hjust=0, vjust = .5))
 
@@ -1327,11 +1324,11 @@ g.met +
 ```{r FE-experimental, include=F, eval=F}
 
 # Experimental plots
-ggplot(el.melt) + 
+ggplot(el.melt) +
   facet_grid(variable+value~Treatment) +
   geom_bar(aes(x=100, y = PercentageInModule), stat="identity") + coord_polar(theta = "y")
 
-ggplot(el.melt, aes(x=PercentageInModule)) + 
+ggplot(el.melt, aes(x=PercentageInModule)) +
   #facet_grid(variable+value~Treatment) +
   #facet_grid(variable~value) +
   facet_wrap("Treatment", ncol = 1) +
@@ -1381,8 +1378,8 @@ ggplot(na.omit(el.melt), aes(x = Ratio/2, y = PercentageInModule, width = Ratio,
 
 
 # this bar plot does not work great yet... I'm not sure how best to label the bars.
-# ggplot(el.melt) + 
-#   geom_bar(aes(x=100, y=PercentageInModule, fill = value), stat="identity") + 
+# ggplot(el.melt) +
+#   geom_bar(aes(x=100, y=PercentageInModule, fill = value), stat="identity") +
 #   facet_grid(variable~Treatment)
 #   #facet_wrap(~variable+Treatment)
 #   #coord_polar(theta = "y")
@@ -1393,4 +1390,3 @@ ggplot(na.omit(el.melt), aes(x = Ratio/2, y = PercentageInModule, width = Ratio,
 # - percentage in condition
 
 ```
-
